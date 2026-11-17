@@ -1,0 +1,20 @@
+{
+  "name": "ward-thirteen",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "WARD THIRTEEN — a first-person survival horror game set in an abandoned hospital.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "test": "node tests/run.mjs"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "^1.1.1",
+    "vite": "^5.4.10"
+  }
+}

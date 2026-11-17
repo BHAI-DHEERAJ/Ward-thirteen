@@ -1,0 +1,3566 @@
+{
+  "game": "WARD THIRTEEN",
+  "version": 2,
+  "generated": "2026-11-17",
+  "grid": {
+    "tileMetres": 2,
+    "width": 48,
+    "height": 40,
+    "worldWidth": 96,
+    "worldDepth": 80
+  },
+  "spawn": {
+    "x": 23.5,
+    "z": 37.2,
+    "yaw": 3.141592653589793,
+    "note": "approach road, outside the chained gate"
+  },
+  "gate": {
+    "z": 34,
+    "opening": [
+      21.2,
+      25.8
+    ]
+  },
+  "levels": [
+    {
+      "id": "w13",
+      "name": "WARD THIRTEEN",
+      "short": "W13",
+      "y": -15,
+      "ceiling": 3.2,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "W13-01",
+          "id": "w13Sealed",
+          "name": "SEALED ENTRANCE",
+          "theme": "secret",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": "wardCard",
+              "keyName": "Ward Thirteen Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_w13entry"
+          ]
+        },
+        {
+          "code": "W13-02",
+          "id": "w13Patient1",
+          "name": "PATIENT ROOM 01",
+          "theme": "ward13",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_w13_patient1",
+            "note_w13_p1",
+            "battery"
+          ]
+        },
+        {
+          "code": "W13-03",
+          "id": "w13Patient2",
+          "name": "PATIENT ROOM 02",
+          "theme": "ward13",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_w13_patient2",
+            "note_w13_p2"
+          ]
+        },
+        {
+          "code": "W13-04",
+          "id": "w13Exam",
+          "name": "EXAMINATION ROOM",
+          "theme": "theatre",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_w13_exam",
+            "note_w13_exam"
+          ]
+        },
+        {
+          "code": "W13-05",
+          "id": "w13Containment",
+          "name": "CONTAINMENT",
+          "theme": "secret",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_w13_containment",
+            "battery"
+          ]
+        },
+        {
+          "code": "W13-06",
+          "id": "w13Checkpoint",
+          "name": "SECURITY CHECKPOINT",
+          "theme": "cctv",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_w13_checkpoint"
+          ]
+        },
+        {
+          "code": "W13-07",
+          "id": "w13Corridor",
+          "name": "MAIN WARD CORRIDOR",
+          "theme": "ward13",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_w13_corridor"
+          ]
+        },
+        {
+          "code": "W13-08",
+          "id": "w13Records",
+          "name": "PATIENT RECORDS",
+          "theme": "office",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_w13_records",
+            "note_w13_records"
+          ]
+        },
+        {
+          "code": "W13-09",
+          "id": "w13Unknown",
+          "name": "UNKNOWN CHAMBER",
+          "theme": "secret",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_truth",
+            "note_w13_unknown"
+          ]
+        },
+        {
+          "code": "W13-10",
+          "id": "w13Escape",
+          "name": "EMERGENCY ESCAPE",
+          "theme": "tunnel",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_w13_escape"
+          ]
+        },
+        {
+          "code": "W13-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "W13-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "W13-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "W13-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": "wardCard",
+              "keyName": "Ward Thirteen Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "W13-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": "wardCard",
+              "keyName": "Ward Thirteen Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "name": "BASEMENT B2 — RESTRICTED RESEARCH",
+      "short": "B2",
+      "y": -10,
+      "ceiling": 3.4,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "B2-01",
+          "id": "securityGate",
+          "name": "RESTRICTED SECURITY",
+          "theme": "cctv",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": "researchKey",
+              "keyName": "Research Key",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_b2gate",
+            "battery"
+          ]
+        },
+        {
+          "code": "B2-02",
+          "id": "biometric",
+          "name": "BIOMETRIC ACCESS",
+          "theme": "lab",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_biometric",
+            "medicine"
+          ]
+        },
+        {
+          "code": "B2-03",
+          "id": "researchLab",
+          "name": "EXPERIMENT LABORATORY",
+          "theme": "lab",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_experiment",
+            "note_researchLab",
+            "battery"
+          ]
+        },
+        {
+          "code": "B2-04",
+          "id": "observation",
+          "name": "OBSERVATION CHAMBER",
+          "theme": "isolation",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_observation",
+            "note_observationB2"
+          ]
+        },
+        {
+          "code": "B2-05",
+          "id": "specimen2",
+          "name": "SPECIMEN STORAGE",
+          "theme": "morgue",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_specimen2",
+            "battery"
+          ]
+        },
+        {
+          "code": "B2-06",
+          "id": "testing",
+          "name": "MEDICAL TESTING",
+          "theme": "emergency",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_testing",
+            "medicine"
+          ]
+        },
+        {
+          "code": "B2-07",
+          "id": "control",
+          "name": "RESEARCH CONTROL",
+          "theme": "cctv",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_control",
+            "note_control",
+            "battery"
+          ]
+        },
+        {
+          "code": "B2-08",
+          "id": "archive2",
+          "name": "RESTRICTED ARCHIVE",
+          "theme": "office",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_ward13_file",
+            "wardCard",
+            "note_archiveB2"
+          ]
+        },
+        {
+          "code": "B2-09",
+          "id": "armory",
+          "name": "SECURITY ARMORY",
+          "theme": "storage",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_armory",
+            "battery"
+          ]
+        },
+        {
+          "code": "B2-10",
+          "id": "containment",
+          "name": "CONTAINMENT ROOM",
+          "theme": "secret",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_containment",
+            "medicine"
+          ]
+        },
+        {
+          "code": "B2-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B2-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": "b2Card",
+              "keyName": "Research Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B2-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "b2Card",
+              "keyName": "Research Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B2-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": "b2Card",
+              "keyName": "Research Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B2-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": "b2Card",
+              "keyName": "Research Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "name": "BASEMENT B1 — MORGUE & STORAGE",
+      "short": "B1",
+      "y": -5,
+      "ceiling": 3.4,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "B1-01",
+          "id": "morgue",
+          "name": "MORGUE",
+          "theme": "morgue",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "researchKey",
+            "note_morgue",
+            "battery"
+          ]
+        },
+        {
+          "code": "B1-02",
+          "id": "autopsy",
+          "name": "AUTOPSY ROOM",
+          "theme": "morgue",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_autopsy",
+            "note_autopsy",
+            "medicine"
+          ]
+        },
+        {
+          "code": "B1-03",
+          "id": "cold",
+          "name": "COLD STORAGE",
+          "theme": "morgue",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_cold",
+            "battery"
+          ]
+        },
+        {
+          "code": "B1-04",
+          "id": "supply",
+          "name": "MEDICAL SUPPLY",
+          "theme": "storage",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "fuelCan",
+            "battery",
+            "battery",
+            "note_supply"
+          ]
+        },
+        {
+          "code": "B1-05",
+          "id": "workshop",
+          "name": "MAINTENANCE WORKSHOP",
+          "theme": "boiler",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_workshop",
+            "tool"
+          ]
+        },
+        {
+          "code": "B1-06",
+          "id": "morgueReception",
+          "name": "MORGUE RECEPTION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_morgueReception",
+            "medicine"
+          ]
+        },
+        {
+          "code": "B1-07",
+          "id": "generator",
+          "name": "GENERATOR ROOM",
+          "theme": "generator",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_generator"
+          ]
+        },
+        {
+          "code": "B1-08",
+          "id": "pumps",
+          "name": "WATER PUMP ROOM",
+          "theme": "boiler",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_pumps",
+            "battery"
+          ]
+        },
+        {
+          "code": "B1-09",
+          "id": "laundry",
+          "name": "OLD LAUNDRY",
+          "theme": "storage",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_laundry",
+            "battery"
+          ]
+        },
+        {
+          "code": "B1-10",
+          "id": "waste",
+          "name": "WASTE DISPOSAL",
+          "theme": "storage",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_wasteB1"
+          ]
+        },
+        {
+          "code": "B1-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B1-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B1-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B1-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "B1-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "gf",
+      "name": "GROUND FLOOR — RECEPTION & EMERGENCY",
+      "short": "GF",
+      "y": 0,
+      "ceiling": 3.5,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "G-01",
+          "id": "security",
+          "name": "SECURITY OFFICE",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "securityKey",
+            "note_watchlog",
+            "battery"
+          ]
+        },
+        {
+          "code": "G-02",
+          "id": "cctv",
+          "name": "CCTV MONITORING",
+          "theme": "cctv",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": "securityKey",
+              "keyName": "Security Key",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_cctv",
+            "battery"
+          ]
+        },
+        {
+          "code": "G-03",
+          "id": "emergency",
+          "name": "EMERGENCY DEPT.",
+          "theme": "emergency",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 33,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 29,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "maintenanceKey",
+            "medicine",
+            "note_emergency"
+          ]
+        },
+        {
+          "code": "G-04",
+          "id": "pharmacy",
+          "name": "PHARMACY",
+          "theme": "pharmacy",
+          "rect": {
+            "x1": 35,
+            "z1": 1,
+            "x2": 38,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 36,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "medicine",
+            "medicine",
+            "battery",
+            "note_pharmacy"
+          ]
+        },
+        {
+          "code": "G-05",
+          "id": "storage",
+          "name": "MEDICAL STORAGE",
+          "theme": "storage",
+          "rect": {
+            "x1": 40,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 40,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery",
+            "fuelCan",
+            "note_storage"
+          ]
+        },
+        {
+          "code": "G-06",
+          "id": "registration",
+          "name": "PATIENT REGISTRATION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "recordsKey",
+            "note_registration",
+            "battery"
+          ]
+        },
+        {
+          "code": "G-07",
+          "id": "reception",
+          "name": "MAIN RECEPTION",
+          "theme": "reception",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            },
+            {
+              "x": 16,
+              "z": 27,
+              "locked": null,
+              "keyName": null,
+              "exterior": true
+            }
+          ],
+          "loot": [
+            "battery",
+            "note_reception",
+            "doc_directory",
+            "medicine"
+          ]
+        },
+        {
+          "code": "G-08",
+          "id": "waiting",
+          "name": "WAITING HALL",
+          "theme": "waiting",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 33,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 29,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_waiting",
+            "battery"
+          ]
+        },
+        {
+          "code": "G-09",
+          "id": "billing",
+          "name": "BILLING / ADMIN",
+          "theme": "office",
+          "rect": {
+            "x1": 35,
+            "z1": 17,
+            "x2": 38,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 36,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_billing",
+            "medicine"
+          ]
+        },
+        {
+          "code": "G-10",
+          "id": "restrooms",
+          "name": "PUBLIC RESTROOMS",
+          "theme": "restroom",
+          "rect": {
+            "x1": 40,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 40,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_restroom"
+          ]
+        },
+        {
+          "code": "G-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "G-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "G-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "GF-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "GF-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "name": "FLOOR 1 — PATIENT WARDS",
+      "short": "1F",
+      "y": 5,
+      "ceiling": 3.5,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "F1-01",
+          "id": "ward12a",
+          "name": "PATIENT ROOM 12A",
+          "theme": "ward",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_patient12",
+            "battery",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F1-02",
+          "id": "ward12b",
+          "name": "PATIENT ROOM 12B",
+          "theme": "ward",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_ward_call",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F1-03",
+          "id": "ward13",
+          "name": "WARD THIRTEEN",
+          "theme": "ward13",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": "wardCard",
+              "keyName": "Ward Thirteen Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_ward13_log",
+            "note_scratch",
+            "battery"
+          ]
+        },
+        {
+          "code": "F1-04",
+          "id": "pediatric",
+          "name": "PEDIATRIC WARD",
+          "theme": "ward",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_pediatric",
+            "battery"
+          ]
+        },
+        {
+          "code": "F1-05",
+          "id": "linen",
+          "name": "CLEAN LINEN",
+          "theme": "storage",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery",
+            "note_linen"
+          ]
+        },
+        {
+          "code": "F1-06",
+          "id": "nurses",
+          "name": "NURSES STATION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_nurses",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F1-07",
+          "id": "treatment",
+          "name": "TREATMENT ROOM",
+          "theme": "emergency",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "medicine",
+            "battery",
+            "note_treatment"
+          ]
+        },
+        {
+          "code": "F1-08",
+          "id": "visitors",
+          "name": "VISITORS' LOUNGE",
+          "theme": "waiting",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_visitors",
+            "battery"
+          ]
+        },
+        {
+          "code": "F1-09",
+          "id": "records",
+          "name": "MEDICAL RECORDS",
+          "theme": "office",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": "recordsKey",
+              "keyName": "Records Room Key",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "patientFile",
+            "doc_ward13_seal",
+            "note_records"
+          ]
+        },
+        {
+          "code": "F1-10",
+          "id": "restrooms2",
+          "name": "PATIENT RESTROOMS",
+          "theme": "restroom",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery"
+          ]
+        },
+        {
+          "code": "F1-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F1-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F1-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "1F-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "1F-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "name": "FLOOR 2 — SURGICAL",
+      "short": "2F",
+      "y": 10,
+      "ceiling": 3.5,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "F2-01",
+          "id": "preop",
+          "name": "PRE-OPERATION",
+          "theme": "emergency",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_preop",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F2-02",
+          "id": "ot1",
+          "name": "OPERATION THEATRE 1",
+          "theme": "theatre",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": "surgeryCard",
+              "keyName": "Surgical Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_surgery_log",
+            "note_ot",
+            "battery"
+          ]
+        },
+        {
+          "code": "F2-03",
+          "id": "ot2",
+          "name": "OPERATION THEATRE 2",
+          "theme": "theatre",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_ot2",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F2-04",
+          "id": "sterile",
+          "name": "STERILIZATION",
+          "theme": "lab",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery",
+            "note_sterile"
+          ]
+        },
+        {
+          "code": "F2-05",
+          "id": "anesthesia",
+          "name": "ANESTHESIA STORE",
+          "theme": "pharmacy",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "medicine",
+            "note_anesthesia"
+          ]
+        },
+        {
+          "code": "F2-06",
+          "id": "surgical",
+          "name": "SURGICAL RECEPTION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "surgeryCard",
+            "note_surgical",
+            "battery"
+          ]
+        },
+        {
+          "code": "F2-07",
+          "id": "recovery",
+          "name": "RECOVERY ROOM",
+          "theme": "ward",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_recovery",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F2-08",
+          "id": "postop",
+          "name": "POST-OP WARD",
+          "theme": "ward",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery",
+            "note_postop"
+          ]
+        },
+        {
+          "code": "F2-09",
+          "id": "equipment",
+          "name": "EQUIPMENT STORE",
+          "theme": "storage",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery",
+            "note_equipment"
+          ]
+        },
+        {
+          "code": "F2-10",
+          "id": "waste",
+          "name": "MEDICAL WASTE",
+          "theme": "storage",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_waste"
+          ]
+        },
+        {
+          "code": "F2-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F2-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F2-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "2F-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "2F-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "name": "FLOOR 3 — INTENSIVE CARE",
+      "short": "3F",
+      "y": 15,
+      "ceiling": 3.5,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "F3-01",
+          "id": "icu1",
+          "name": "INTENSIVE CARE 1",
+          "theme": "emergency",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_icu",
+            "battery"
+          ]
+        },
+        {
+          "code": "F3-02",
+          "id": "icu2",
+          "name": "INTENSIVE CARE 2",
+          "theme": "emergency",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_icu2",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F3-03",
+          "id": "monitoring",
+          "name": "CENTRAL MONITORING",
+          "theme": "cctv",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "icuKey",
+            "note_monitoring",
+            "battery"
+          ]
+        },
+        {
+          "code": "F3-04",
+          "id": "respiratory",
+          "name": "RESPIRATORY CARE",
+          "theme": "lab",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "medicine",
+            "battery"
+          ]
+        },
+        {
+          "code": "F3-05",
+          "id": "oxygen",
+          "name": "OXYGEN SUPPLY",
+          "theme": "storage",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "battery",
+            "note_oxygen"
+          ]
+        },
+        {
+          "code": "F3-06",
+          "id": "icuReception",
+          "name": "ICU RECEPTION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_icuReception",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F3-07",
+          "id": "restrictedWard",
+          "name": "RESTRICTED WARD",
+          "theme": "isolation",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": "icuKey",
+              "keyName": "ICU Ward Key",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_patientzero",
+            "note_restrictedWard",
+            "battery"
+          ]
+        },
+        {
+          "code": "F3-08",
+          "id": "observation",
+          "name": "OBSERVATION ROOM",
+          "theme": "office",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_observation"
+          ]
+        },
+        {
+          "code": "F3-09",
+          "id": "isoCorridor",
+          "name": "ISOLATION CORRIDOR",
+          "theme": "isolation",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_isolation",
+            "battery"
+          ]
+        },
+        {
+          "code": "F3-10",
+          "id": "icuRecords",
+          "name": "RESTRICTED RECORDS",
+          "theme": "office",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_icu_records",
+            "note_icu_records"
+          ]
+        },
+        {
+          "code": "F3-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F3-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F3-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "3F-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "3F-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "name": "FLOOR 4 — PSYCHIATRIC",
+      "short": "4F",
+      "y": 20,
+      "ceiling": 3.5,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "F4-01",
+          "id": "psychReception",
+          "name": "PSYCHIATRIC RECEPTION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_psychReception",
+            "battery"
+          ]
+        },
+        {
+          "code": "F4-02",
+          "id": "psychObserve",
+          "name": "PATIENT OBSERVATION",
+          "theme": "isolation",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_observation2",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F4-03",
+          "id": "therapy",
+          "name": "GROUP THERAPY",
+          "theme": "waiting",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_therapy",
+            "battery"
+          ]
+        },
+        {
+          "code": "F4-04",
+          "id": "consult",
+          "name": "PSYCHIATRIST'S OFFICE",
+          "theme": "office",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "psychKey",
+            "doc_psych_notes",
+            "note_consult"
+          ]
+        },
+        {
+          "code": "F4-05",
+          "id": "medstore",
+          "name": "MEDICATION STORE",
+          "theme": "pharmacy",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "medicine",
+            "medicine",
+            "battery"
+          ]
+        },
+        {
+          "code": "F4-06",
+          "id": "psychRooms",
+          "name": "PATIENT ROOMS",
+          "theme": "isolation",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_psych_rooms",
+            "battery"
+          ]
+        },
+        {
+          "code": "F4-07",
+          "id": "secureIso",
+          "name": "SECURE ISOLATION",
+          "theme": "isolation",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": "psychKey",
+              "keyName": "Psych Ward Key",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_isolation",
+            "note_secureIso",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F4-08",
+          "id": "activity",
+          "name": "ACTIVITY ROOM",
+          "theme": "waiting",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_activity",
+            "battery"
+          ]
+        },
+        {
+          "code": "F4-09",
+          "id": "psychRecords",
+          "name": "PATIENT RECORDS",
+          "theme": "office",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "adminKey",
+            "doc_psych_records",
+            "note_psychRecords"
+          ]
+        },
+        {
+          "code": "F4-10",
+          "id": "electro",
+          "name": "TREATMENT ROOM",
+          "theme": "emergency",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_electro",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F4-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F4-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F4-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "4F-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "4F-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "name": "FLOOR 5 — ADMINISTRATION",
+      "short": "5F",
+      "y": 25,
+      "ceiling": 3.5,
+      "kind": "interior",
+      "rooms": [
+        {
+          "code": "F5-01",
+          "id": "admin",
+          "name": "ADMINISTRATION",
+          "theme": "office",
+          "rect": {
+            "x1": 6,
+            "z1": 1,
+            "x2": 12,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_admin",
+            "battery"
+          ]
+        },
+        {
+          "code": "F5-02",
+          "id": "director",
+          "name": "DIRECTOR'S OFFICE",
+          "theme": "office",
+          "rect": {
+            "x1": 14,
+            "z1": 1,
+            "x2": 18,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 12,
+              "locked": "adminKey",
+              "keyName": "Director's Office Key",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "b2Card",
+            "note_director",
+            "doc_director"
+          ]
+        },
+        {
+          "code": "F5-03",
+          "id": "server",
+          "name": "SERVER ROOM",
+          "theme": "cctv",
+          "rect": {
+            "x1": 25,
+            "z1": 1,
+            "x2": 30,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_server",
+            "battery"
+          ]
+        },
+        {
+          "code": "F5-04",
+          "id": "research",
+          "name": "RESEARCH LABORATORY",
+          "theme": "lab",
+          "rect": {
+            "x1": 32,
+            "z1": 1,
+            "x2": 36,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_research",
+            "note_research",
+            "medicine"
+          ]
+        },
+        {
+          "code": "F5-05",
+          "id": "specimen",
+          "name": "SPECIMEN STORAGE",
+          "theme": "storage",
+          "rect": {
+            "x1": 38,
+            "z1": 1,
+            "x2": 41,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_specimen",
+            "battery"
+          ]
+        },
+        {
+          "code": "F5-06",
+          "id": "meeting",
+          "name": "STAFF MEETING ROOM",
+          "theme": "waiting",
+          "rect": {
+            "x1": 6,
+            "z1": 17,
+            "x2": 12,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 9,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_meeting"
+          ]
+        },
+        {
+          "code": "F5-07",
+          "id": "it",
+          "name": "IT DEPARTMENT",
+          "theme": "office",
+          "rect": {
+            "x1": 14,
+            "z1": 17,
+            "x2": 18,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 16,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_it",
+            "battery"
+          ]
+        },
+        {
+          "code": "F5-08",
+          "id": "archive",
+          "name": "ARCHIVE STORAGE",
+          "theme": "storage",
+          "rect": {
+            "x1": 25,
+            "z1": 17,
+            "x2": 30,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 27,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_archive",
+            "note_archive2"
+          ]
+        },
+        {
+          "code": "F5-09",
+          "id": "privateOffice",
+          "name": "PRIVATE RESEARCH OFFICE",
+          "theme": "office",
+          "rect": {
+            "x1": 32,
+            "z1": 17,
+            "x2": 36,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 34,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "doc_private",
+            "note_private",
+            "battery"
+          ]
+        },
+        {
+          "code": "F5-10",
+          "id": "secretCorridor",
+          "name": "SEALED CORRIDOR",
+          "theme": "tunnel",
+          "rect": {
+            "x1": 38,
+            "z1": 17,
+            "x2": 41,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 39,
+              "z": 16,
+              "locked": "b2Card",
+              "keyName": "Research Access Card",
+              "exterior": false
+            }
+          ],
+          "loot": [
+            "note_sealed"
+          ]
+        },
+        {
+          "code": "F5-11",
+          "id": "core_public",
+          "name": "ELEVATOR LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 1,
+            "x2": 23,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 12,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F5-12",
+          "id": "core_service",
+          "name": "SERVICE LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 20,
+            "z1": 17,
+            "x2": 23,
+            "z2": 26
+          },
+          "doors": [
+            {
+              "x": 21,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "F5-13",
+          "id": "core_restricted",
+          "name": "RESTRICTED LOBBY",
+          "theme": "elevator",
+          "rect": {
+            "x1": 43,
+            "z1": 1,
+            "x2": 46,
+            "z2": 11
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 12,
+              "locked": "restricted",
+              "keyName": "Restricted Access",
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "5F-STAIR-A",
+          "id": "stairs_west",
+          "name": "STAIRWELL A",
+          "theme": "stairs",
+          "rect": {
+            "x1": 1,
+            "z1": 17,
+            "x2": 4,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 2,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        },
+        {
+          "code": "5F-STAIR-B",
+          "id": "stairs_east",
+          "name": "STAIRWELL B",
+          "theme": "stairs",
+          "rect": {
+            "x1": 43,
+            "z1": 17,
+            "x2": 46,
+            "z2": 25
+          },
+          "doors": [
+            {
+              "x": 44,
+              "z": 16,
+              "locked": null,
+              "keyName": null,
+              "exterior": false
+            }
+          ],
+          "loot": []
+        }
+      ]
+    },
+    {
+      "id": "roof",
+      "name": "ROOFTOP — PLANT & HELIPAD",
+      "y": 30,
+      "kind": "roof",
+      "rooms": []
+    }
+  ],
+  "elevators": [
+    {
+      "id": "public",
+      "name": "ELEVATOR A — PUBLIC",
+      "stops": [
+        "gf",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "roof"
+      ],
+      "requires": null,
+      "centre": {
+        "tx": 21.5,
+        "tz": 3.2
+      },
+      "car": {
+        "width": 2.4,
+        "depth": 2.5
+      }
+    },
+    {
+      "id": "service",
+      "name": "ELEVATOR B — SERVICE",
+      "stops": [
+        "b2",
+        "b1",
+        "gf",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
+      "requires": null,
+      "centre": {
+        "tx": 21.5,
+        "tz": 19.4
+      },
+      "car": {
+        "width": 2.4,
+        "depth": 2.5
+      }
+    },
+    {
+      "id": "restricted",
+      "name": "ELEVATOR D — RESTRICTED",
+      "stops": [
+        "b2",
+        "w13"
+      ],
+      "requires": "wardCard",
+      "centre": {
+        "tx": 44.5,
+        "tz": 3.2
+      },
+      "car": {
+        "width": 2.2,
+        "depth": 2.4
+      }
+    }
+  ],
+  "stairs": [
+    {
+      "id": "west",
+      "name": "STAIRCASE A — WEST",
+      "x": [
+        1,
+        4
+      ],
+      "z": [
+        17,
+        26
+      ],
+      "levels": [
+        "w13",
+        "b2",
+        "b1",
+        "gf",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "roof"
+      ]
+    },
+    {
+      "id": "east",
+      "name": "STAIRCASE B — EAST",
+      "x": [
+        43,
+        46
+      ],
+      "z": [
+        17,
+        26
+      ],
+      "levels": [
+        "w13",
+        "b2",
+        "b1",
+        "gf",
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "roof"
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "id": "CAM 03",
+      "name": "MAIN RECEPTION",
+      "level": "gf",
+      "at": [
+        15.2,
+        24.5
+      ],
+      "y": 2.9
+    },
+    {
+      "id": "CAM 07",
+      "name": "F1 CORRIDOR",
+      "level": "f1",
+      "at": [
+        7.5,
+        14
+      ],
+      "y": 7.4
+    },
+    {
+      "id": "CAM 11",
+      "name": "MORGUE",
+      "level": "b1",
+      "at": [
+        7.4,
+        3.5
+      ],
+      "y": 2.4
+    },
+    {
+      "id": "CAM 12",
+      "name": "RESEARCH LAB",
+      "level": "b2",
+      "at": [
+        26.4,
+        3.6
+      ],
+      "y": 2.4
+    },
+    {
+      "id": "CAM 04",
+      "name": "SURGICAL WING",
+      "level": "f2",
+      "at": [
+        15.4,
+        14
+      ],
+      "y": 12.4
+    },
+    {
+      "id": "CAM 09",
+      "name": "PSYCHIATRIC WARD",
+      "level": "f4",
+      "at": [
+        40.2,
+        22
+      ],
+      "y": 22.4
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <title>WARD THIRTEEN</title>
+  <meta name="description" content="Ward Thirteen — a first-person survival horror game set in an abandoned hospital at 2:47 AM." />
+  <link rel="stylesheet" href="/src/ui/styles.css" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <div id="ui">
+    <!-- ============ LOADING ============ -->
+    <div id="loading" class="screen">
+      <div class="load-inner">
+        <div class="load-title">WARD THIRTEEN</div>
+        <div class="load-bar"><i id="load-fill"></i></div>
+        <div class="load-status" id="load-status">Preparing the ward…</div>
+      </div>
+    </div>
+
+    <!-- ============ MAIN MENU ============ -->
+    <div id="menu" class="screen hidden">
+      <div class="menu-vignette"></div>
+      <div class="menu-fog">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="menu-content">
+        <h1 class="game-title">WARD THIRTEEN</h1>
+        <p class="game-sub">Some doors should never be opened.</p>
+        <nav class="menu-nav">
+          <button class="menu-btn" id="btn-new">NEW GAME</button>
+          <button class="menu-btn" id="btn-continue">CONTINUE</button>
+          <button class="menu-btn" id="btn-settings">SETTINGS</button>
+          <button class="menu-btn" id="btn-quit">QUIT</button>
+        </nav>
+        <div class="menu-foot">
+          <span>2:47 AM — WARD 13 WING</span>
+          <span class="muted">Mouse + Keyboard · Headphones recommended</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ HUD ============ -->
+    <div id="hud" class="hidden">
+      <div id="crosshair"></div>
+
+      <div id="objective-panel">
+        <div class="panel-label">CURRENT OBJECTIVE</div>
+        <div id="objective-text">—</div>
+        <div id="objective-sub"></div>
+      </div>
+
+      <div id="prompt" class="hidden"><span id="prompt-key">E</span><span id="prompt-text">Open Door</span></div>
+
+      <div id="battery">
+        <div class="battery-shell"><i id="battery-fill"></i></div>
+        <div class="battery-row">
+          <span id="battery-pct">100%</span>
+          <span id="flash-state">FLASHLIGHT</span>
+        </div>
+      </div>
+
+      <div id="stamina"><i id="stamina-fill"></i></div>
+
+      <div id="vitals" class="hidden">
+        <div class="vital-label">CONDITION</div>
+        <div class="vital-bar"><i id="vital-fill"></i></div>
+      </div>
+
+      <div id="subtitle"></div>
+      <div id="toast"></div>
+      <div id="mission-banner" class="hidden">
+        <div class="mb-kicker">MISSION</div>
+        <div class="mb-title" id="mb-title"></div>
+        <div class="mb-sub" id="mb-sub"></div>
+      </div>
+      <div id="hide-indicator" class="hidden">HIDING — <b>E</b> to leave</div>
+      <div id="interact-hint">TAB Inventory · J Journal · F Flashlight · SHIFT Sprint · CTRL Crouch</div>
+    </div>
+
+    <!-- ============ INVENTORY ============ -->
+    <div id="inventory" class="screen hidden">
+      <div class="sheet">
+        <div class="sheet-head">
+          <h2>INVENTORY</h2>
+          <div class="sheet-meta"><span id="inv-cap">0 / 14</span> · <span id="inv-floors">GROUND FLOOR</span></div>
+        </div>
+        <div class="inv-body">
+          <div class="inv-grid" id="inv-grid"></div>
+          <div class="inv-detail" id="inv-detail">
+            <div class="detail-empty">Select an item to inspect.</div>
+          </div>
+        </div>
+        <div class="sheet-foot">TAB / ESC to close · Click an item · [USE] to consume · [READ] to open documents</div>
+      </div>
+    </div>
+
+    <!-- ============ DOCUMENT READER ============ -->
+    <div id="document" class="screen hidden">
+      <div class="paper">
+        <div class="paper-head"><span id="doc-dept">ST. AUGUSTINE HOSPITAL</span><span id="doc-date"></span></div>
+        <h3 id="doc-title">—</h3>
+        <div id="doc-body" class="paper-body"></div>
+        <div class="paper-foot">
+          <span id="doc-sig"></span>
+          <button class="text-btn" id="doc-close">PUT DOWN [E]</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PAUSE ============ -->
+    <div id="pause" class="screen hidden">
+      <div class="pause-fog"></div>
+      <div class="pause-inner">
+        <div class="pause-kicker">PAUSED</div>
+        <h2>WARD THIRTEEN</h2>
+        <div class="pause-nav">
+          <button class="menu-btn" id="btn-resume">RESUME</button>
+          <button class="menu-btn" id="btn-p-settings">SETTINGS</button>
+          <button class="menu-btn" id="btn-restart">RESTART CHECKPOINT</button>
+          <button class="menu-btn" id="btn-mainmenu">MAIN MENU</button>
+        </div>
+        <div class="pause-foot" id="pause-status">Checkpoint: Entrance</div>
+      </div>
+    </div>
+
+    <!-- ============ SETTINGS ============ -->
+    <div id="settings" class="screen hidden">
+      <div class="sheet narrow">
+        <div class="sheet-head"><h2>SETTINGS</h2></div>
+        <div class="settings-body">
+          <label class="row">
+            <span>Mouse sensitivity</span>
+            <input type="range" id="set-sens" min="0.2" max="2.5" step="0.05" value="1" />
+            <em id="set-sens-val">1.00</em>
+          </label>
+          <label class="row">
+            <span>Master volume</span>
+            <input type="range" id="set-vol" min="0" max="1" step="0.02" value="0.8" />
+            <em id="set-vol-val">80%</em>
+          </label>
+          <label class="row">
+            <span>Field of view</span>
+            <input type="range" id="set-fov" min="60" max="95" step="1" value="74" />
+            <em id="set-fov-val">74</em>
+          </label>
+          <label class="row">
+            <span>Invert mouse Y</span>
+            <input type="checkbox" id="set-invert" />
+            <em></em>
+          </label>
+          <label class="row">
+            <span>Film grain &amp; grading</span>
+            <input type="checkbox" id="set-grain" checked />
+            <em></em>
+          </label>
+          <label class="row">
+            <span>Graphics quality</span>
+            <select id="set-quality">
+              <option value="low">Low — stable</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High — cinematic</option>
+            </select>
+            <em></em>
+          </label>
+          <div class="settings-note">Lower quality reduces shadows and post-processing. Use headphones.</div>
+        </div>
+        <div class="sheet-foot"><button class="text-btn" id="settings-close">BACK</button></div>
+      </div>
+    </div>
+
+    <!-- ============ CCTV OVERLAY ============ -->
+    <div id="cctv-ui" class="screen hidden">
+      <div class="cctv-top">
+        <span class="rec-dot"></span><span>SECURITY SYSTEM — ST. AUGUSTINE HOSPITAL</span>
+        <span class="cctv-time" id="cctv-clock">02:47:12</span>
+      </div>
+      <div class="cctv-list" id="cctv-list"></div>
+      <div class="cctv-bottom">
+        <div id="cctv-msg">MONITOR 04 — CAM 07 — WARD 13 CORRIDOR</div>
+        <div class="cctv-keys"><b>1-4</b> change feed · <b>SPACE</b> stand up · <b>E</b> exit terminal</div>
+      </div>
+    </div>
+
+    <!-- ============ MISSION SPLASH / ENDING ============ -->
+    <div id="ending" class="screen hidden">
+      <div class="end-inner">
+        <div class="end-kicker">WARD THIRTEEN</div>
+        <h2 id="end-title">YOU MADE IT OUT</h2>
+        <p id="end-text"></p>
+        <div class="end-stats" id="end-stats"></div>
+        <button class="menu-btn" id="btn-end-menu">RETURN TO MAIN MENU</button>
+      </div>
+    </div>
+
+    <div id="damage"></div>
+    <div id="fade"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
