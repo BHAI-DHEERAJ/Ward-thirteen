@@ -329,6 +329,10 @@ export class World {
     const buckets = new Map();
     const addTile = (x, z) => {
       if (x < 0 || z < 0 || x >= GRID_W || z >= GRID_H) return;
+      // the shell ends at row 26; the exterior doorway occupies row 27, and
+      // nothing beyond it may be walled or the entrance would be sealed from
+      // the courtyard side
+      if (z >= 28) return;
       const i = idx(x, z);
       if (level.grid[i] !== 0) return;
       // only shells: solid tiles that touch an interior walkable tile
@@ -860,15 +864,17 @@ export class World {
   collidersNear(y) {
     const out = [];
     for (const level of Object.values(this.levels)) {
-      if (Math.abs(level.y - y) > 5.6) continue;
+      // only the floor you are standing on: walls are full storey height, so a
+      // collider five metres up must never block you
+      if (Math.abs(level.y - y) > 2.6) continue;
       out.push(...level.colliders);
       for (const d of level.doors || []) {
         if (d.colliders.length) out.push(...d.colliders);
       }
     }
     for (const lift of this.elevators) {
-      if (Math.abs(lift.y - y) < 5.6) {
-        out.push(...lift.doorColliders().filter((c) => Math.abs((LEVEL_BY_ID[c.levelId]?.y ?? 0) - y) < 5.6));
+      if (Math.abs(lift.y - y) < 2.6) {
+        out.push(...lift.doorColliders().filter((c) => Math.abs((LEVEL_BY_ID[c.levelId]?.y ?? 0) - y) < 2.6));
       }
     }
     return out;

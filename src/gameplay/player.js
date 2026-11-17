@@ -294,7 +294,8 @@ export class Player {
       }
     }
     // keep the player inside the building footprint / compound
-    if (nx < -46.5 || nx > 46.5 || nz < -33 || nz > 39.5) return;
+    // the building shell runs from z = -38 to z = +13; the compound to z = +39
+    if (nx < -46.6 || nx > 46.6 || nz < -38.9 || nz > 39.2) return;
     this.position.x = nx;
     this.position.z = nz;
   }

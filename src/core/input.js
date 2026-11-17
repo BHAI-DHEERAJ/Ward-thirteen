@@ -45,8 +45,12 @@ export class Input {
 
   lock() {
     if (this.locked) return;
-    const p = this.canvas.requestPointerLock?.({ unadjustedMovement: true });
-    if (p && p.catch) p.catch(() => this.canvas.requestPointerLock?.());
+    try {
+      const p = this.canvas.requestPointerLock?.({ unadjustedMovement: true });
+      if (p && p.catch) p.catch(() => { try { this.canvas.requestPointerLock?.(); } catch { /* ignore */ } });
+    } catch {
+      try { this.canvas.requestPointerLock?.(); } catch { /* ignore */ }
+    }
   }
   unlock() { if (document.pointerLockElement) document.exitPointerLock(); }
 

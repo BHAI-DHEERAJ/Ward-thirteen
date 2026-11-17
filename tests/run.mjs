@@ -332,6 +332,61 @@ if (world) {
   ok(Math.abs(player.position.z - sz) < 1.5, 'player does not drift while idle');
   ok(player.battery < 0.99 && player.battery > 0.5, 'flashlight battery drains slowly', `${player.battery.toFixed(3)}`);
 
+  // the movement clamp must not seal off the north rooms
+  const northZ = worldZ(2);
+  player.reset({ x: worldX(9), z: northZ + 2.5, y: 0, levelId: 'gf', yaw: 0 });
+  const startZ = player.position.z;
+  input.down = (code) => code === 'KeyW';   // hold W only
+  for (let i = 0; i < 90; i++) player.update(1 / 60, { uiBlocking: false });
+  input.down = () => false;
+  ok(player.position.z < startZ - 0.2, 'the player can walk north into the north rooms',
+     `${startZ.toFixed(2)} → ${player.position.z.toFixed(2)}`);
+  ok(player.position.z > northZ - 1.5, 'and stops at the interior wall, not the map edge',
+     `${player.position.z.toFixed(2)}`);
+
+  // the gate must physically block the player until it is opened
+  const gateZ = worldZ(GATE.z);
+  player.reset({ x: 0, z: gateZ + 3, y: 0, levelId: 'gf', yaw: 0 });
+  input.down = (code) => code === 'KeyW';
+  for (let i = 0; i < 150; i++) player.update(1 / 60, { uiBlocking: false });
+  ok(player.position.z > gateZ, 'the chained gate blocks the player', `${player.position.z.toFixed(2)} vs gate ${gateZ}`);
+  world.outdoor.gate.locked = false;
+  world.outdoor.gate.open = 1;
+  for (let i = 0; i < 200; i++) player.update(1 / 60, { uiBlocking: false });
+  ok(player.position.z < gateZ - 0.4, 'the open gate lets the player through', `${player.position.z.toFixed(2)}`);
+
+  // the main entrance leads into the reception
+  const entranceZ = worldZ(27);
+  player.reset({ x: worldX(16), z: entranceZ + 2.2, y: 0, levelId: 'gf', yaw: 0 });
+  const mainDoor = world.levels.gf.doors.find((d) => d.exterior);
+  ok(!!mainDoor, 'the main entrance door exists');
+  if (mainDoor) {
+    mainDoor.forceOpen();
+    for (let i = 0; i < 30; i++) mainDoor.update(0.1);   // let the leaves swing
+    for (let i = 0; i < 200; i++) player.update(1 / 60, { uiBlocking: false });
+    ok(player.position.z < entranceZ - 1.2, 'the player can walk in through the main entrance',
+       `${player.position.z.toFixed(2)}`);
+    const room = world.levels.gf.roomMap[Math.floor((player.position.z + 40) / 2) * GRID_W + Math.floor((player.position.x + 48) / 2)];
+    ok(room && room.id === 'reception', 'and ends up inside the reception', room?.id);
+  }
+  input.down = () => false;
+
+  // stairwells must actually descend between floors
+  const shaft = world.stairs[0];
+  const hi = shaft.sample(worldX(1.75), worldZ(21), 0.2);
+  const lo = shaft.sample(worldX(1.75), worldZ(24.2), 0.2);
+  ok(!!hi && !!lo, 'the stair shaft samples a surface');
+  if (hi && lo) ok(lo.y < hi.y - 0.5, 'staircase A descends', `${hi.y.toFixed(2)} → ${lo.y.toFixed(2)}`);
+  ok(shaft.levelForY(-5).id === 'b1', 'the west staircase reaches B1');
+  ok(shaft.levelForY(-15).id === 'w13', 'the west staircase reaches Ward Thirteen');
+
+  // the lift must be usable once power is on
+  const lift = world.elevators.find((e) => e.cfg.id === 'public');
+  ok(!!lift, 'the public lift exists');
+  if (lift) {
+    ok(lift.cfg.stops.includes('f1') && lift.cfg.stops.includes('roof'), 'the public lift serves every floor');
+  }
+
   // world light pool
   world.updateLights(0.1, camera);
   world.setPower(true);

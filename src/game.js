@@ -377,12 +377,16 @@ export class Game {
 
   updateMenuCamera() {
     const t = this.menuTime;
-    const x = Math.sin(t * 0.045) * 3.4;
-    const z = 36.5 + Math.cos(t * 0.037) * 1.6;
-    this.camera.position.set(x, 2.35 + Math.sin(t * 0.11) * 0.06, z);
-    this.camera.rotation.set(-0.012, Math.PI + Math.sin(t * 0.06) * 0.05, 0, 'YXZ');
-    // subtle handheld drift
-    this.camera.rotation.z = Math.sin(t * 0.21) * 0.0035;
+    // a slow, low drift outside the gate, framing the sign and the facade
+    const x = Math.sin(t * 0.045) * 2.6;
+    const z = 36.9 + Math.cos(t * 0.037) * 0.9;
+    this.camera.position.set(x, 2.25 + Math.sin(t * 0.11) * 0.05, z);
+    this.camera.rotation.set(
+      0.035 + Math.sin(t * 0.083) * 0.012,
+      Math.sin(t * 0.052) * 0.04,
+      Math.sin(t * 0.21) * 0.0035,
+      'YXZ'
+    );
   }
 
   handleInput(dt) {
@@ -618,7 +622,7 @@ export class Game {
     this.player.frozen = false;
     const p = this.player;
     this.camera.position.set(p.position.x, p.feetY + p.eyeHeight, p.position.z);
-    this.camera.rotation.set(p.pitch, p.yaw + Math.PI, 0, 'YXZ');
+    this.camera.rotation.set(p.pitch, p.yaw, 0, 'YXZ');
     this.input.lock();
   }
 
