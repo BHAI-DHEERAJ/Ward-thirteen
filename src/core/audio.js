@@ -10,6 +10,7 @@ export class AudioEngine {
     this.volume = 0.8;
     this.inside = false;
     this.powered = false;
+    this._envInit = false;
     this.entityNear = 0;
     this.nodes = {};
     this.timers = [];
@@ -171,7 +172,8 @@ export class AudioEngine {
   setEnvironment({ inside, powered }) {
     if (!this.started) return;
     const t = this.ctx.currentTime;
-    if (inside !== this.inside) {
+    const first = !this._envInit;
+    if (first || inside !== this.inside) {
       this.inside = inside;
       this.nodes.wind.gain.gain.setTargetAtTime(inside ? 0.055 : 0.16, t, 1.4);
       this.nodes.whistle.gain.gain.setTargetAtTime(inside ? 0.0 : 0.05, t, 1.6);
@@ -180,11 +182,12 @@ export class AudioEngine {
       this.nodes.tone.gain.gain.setTargetAtTime(inside ? 0.055 : 0.028, t, 1.5);
       this.ambient.gain.setTargetAtTime(1, t, 0.8);
     }
-    if (powered !== this.powered) {
+    if (first || powered !== this.powered) {
       this.powered = powered;
       this.nodes.hum.gain.gain.setTargetAtTime(powered ? 0.03 : 0.006, t, 1.5);
       this.nodes.drips.gain.gain.setTargetAtTime(powered ? 0.5 : 0.16, t, 1.6);
     }
+    this._envInit = true;
   }
 
   // ------------------------------------------------------------------ one-shots
